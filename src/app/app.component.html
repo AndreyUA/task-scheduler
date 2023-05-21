@@ -1,1 +1,12 @@
-app component
+<p>{{ count() }}</p>
+
+<div>
+  <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
+</div>
+
+<form (ngSubmit)="onSubmit()" [formGroup]="form">
+  set manually:
+  <input formControlName="counter" type="number" />
+  <button>set</button>
+</form>
