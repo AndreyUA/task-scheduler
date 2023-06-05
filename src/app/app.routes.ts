@@ -14,6 +14,11 @@ export const appRoutes: Routes = [
             (m) => m.dashboardRoutes
           ),
       },
+      {
+        path: 'tasks',
+        loadChildren: () =>
+          import('./feature/tasks/tasks.routes').then((m) => m.tasksRoutes),
+      },
     ],
   },
   { path: '**', redirectTo: 'dashboard', pathMatch: 'full' },
