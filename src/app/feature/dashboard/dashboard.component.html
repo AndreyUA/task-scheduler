@@ -1,1 +1,18 @@
-<p>dashboard works!</p>
+<div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <textarea
+      rows="5"
+      cols="30"
+      pInputTextarea
+      formControlName="taskBody"
+    ></textarea>
+
+    <p-button type="submit" label="Submit"></p-button>
+  </form>
+
+  <ul>
+    <li *ngFor="let task of tasks()">
+      {{ task.body }} in {{ task.creationDate }}
+    </li>
+  </ul>
+</div>
