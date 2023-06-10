@@ -9,6 +9,7 @@ import {
 } from '@angular/forms';
 import { InputTextareaModule } from 'primeng/inputtextarea';
 import { ButtonModule } from 'primeng/button';
+import { TracFocusDirective } from '../../shared/directives/trac-focus.directive';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,6 +19,7 @@ import { ButtonModule } from 'primeng/button';
     ReactiveFormsModule,
     InputTextareaModule,
     ButtonModule,
+    TracFocusDirective,
   ],
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],

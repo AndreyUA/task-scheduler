@@ -16,6 +16,8 @@
       pInputTextarea
       formControlName="taskBody"
       class="col-12 mb-3"
+      appTracFocus
+      (actionOnEnterPress)="onSubmit()"
     ></textarea>
 
     <div class="col-12 p-0 flex justify-content-between">
