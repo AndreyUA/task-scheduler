@@ -1,0 +1,9 @@
+:host ::ng-deep {
+  .p-picklist-list-wrapper {
+    margin: 6px;
+  }
+
+  .p-picklist-buttons {
+    display: none !important;
+  }
+}
