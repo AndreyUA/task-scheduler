@@ -1,18 +1,33 @@
-<div>
-  <form [formGroup]="form" (ngSubmit)="onSubmit()">
-    <textarea
-      rows="5"
-      cols="30"
-      pInputTextarea
-      formControlName="taskBody"
-    ></textarea>
-
-    <p-button type="submit" label="Submit"></p-button>
-  </form>
-
+<div class="card p-3 flex flex-column align-items-center">
   <ul>
     <li *ngFor="let task of tasks()">
       {{ task.body }} in {{ task.creationDate }}
     </li>
   </ul>
+
+  <form
+    class="grid p-fluid max-w-30rem"
+    [formGroup]="form"
+    (ngSubmit)="onSubmit()"
+  >
+    <textarea
+      rows="5"
+      cols="30"
+      pInputTextarea
+      formControlName="taskBody"
+      class="col-12 mb-3"
+    ></textarea>
+
+    <div class="col-12 p-0 flex justify-content-between">
+      <p-button
+        type="button"
+        (click)="onClear()"
+        label="Clear"
+        styleClass="p-button-outlined"
+        icon="pi pi-times"
+      ></p-button>
+
+      <p-button type="submit" label="Create" icon="pi pi-check"></p-button>
+    </div>
+  </form>
 </div>

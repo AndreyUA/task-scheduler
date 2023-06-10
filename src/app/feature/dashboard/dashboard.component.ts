@@ -37,6 +37,12 @@ export class DashboardComponent {
     taskBody: new FormControl<string>('', [Validators.required]),
   });
 
+  constructor() {}
+
+  onClear(): void {
+    this.form.reset();
+  }
+
   onSubmit(): void {
     if (!this.form.get('taskBody')?.value) {
       return;
