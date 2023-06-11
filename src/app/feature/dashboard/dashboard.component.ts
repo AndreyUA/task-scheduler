@@ -52,13 +52,12 @@ export class DashboardComponent {
       return;
     }
 
-    this.tasks.update((currentTasks) => [
-      {
+    this.tasks.mutate((tasks) =>
+      tasks.unshift({
         body: this.form.get('taskBody')!.value!.toString(),
         creationDate: new Date(),
-      },
-      ...currentTasks,
-    ]);
+      })
+    );
 
     this.form.reset();
   }
